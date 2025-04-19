@@ -5,7 +5,6 @@ import os # Importing the os module to interact with the operating system
 import shutil # Importing the shutil module to perform high-level file operations
 
 
-
 def checkFile(filePath):
     if os.path.exists(filePath):
         # copy file to the destination folder
@@ -18,8 +17,16 @@ def checkFile(filePath):
         # os.system(f'copy "{filePath}" "{destination}"')
         shutil.copyfile(filePath, destination+"wallpaper.jpg")
         print(filePath + " copied to " + destination)
+        label2 = tk.Label(root, text="Your wallpaper image has been copied!")
+        label2.config(font=("Arial", 10))
+        label2.config(bg="lightgreen")
+        label2.pack(pady=5)
     else:
         print("File does not exist")
+        label2 = tk.Label(root, text="Your wallpaper image has not been copied!")
+        label2.config(font=("Arial", 10))
+        label2.config(bg="red")
+        label2.pack(pady=5)
         return False
     return True
 
@@ -42,6 +49,7 @@ dateLabel.config(bg="lightblue")
 dateLabel.pack(pady=5)
 button2 = tk.Button(root, text="Exit", command=root.quit)
 button2.pack(pady=10)
+
 
 
 
