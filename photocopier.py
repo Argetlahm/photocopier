@@ -64,6 +64,11 @@ dateLabel.config(bg="lightblue")
 dateLabel.pack(pady=5)
 button2 = tk.Button(root, text="Exit", command=root.quit)
 button2.pack(pady=10)
+versionLabel = tk.Label(root, text="Version 1.1")
+versionLabel.config(font=("Arial", 8))
+versionLabel.config(bg="lightblue")
+versionLabel.pack(pady=5)
+
 
 
 
