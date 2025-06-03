@@ -3,7 +3,6 @@ import datetime as datetime
 from datetime import timedelta as dt # Importing the datetime module to work with dates and times
 import os # Importing the os module to interact with the operating system
 import shutil # Importing the shutil module to perform high-level file operations
-import glob # Importing the glob module to find all the pathnames matching a specified pattern
 from os import listdir
 from os.path import isfile, join
 import random # Importing the random module to generate random numbers
@@ -47,10 +46,8 @@ currentDate = tk.StringVar()
 currentDate.set((datetime.datetime.today() - dt(1)).strftime("%Y%m%d"))
 print(currentDate.get())
 dateLabel = tk.Label(root, text="Yesterday Date: "+ currentDate.get())
-# checkFile("C:/Users/gunaw/AppData/Local/Packages/Microsoft.BingWallpaper_8wekyb3d8bbwe/LocalState/images/Bing/"+currentDate.get()+"_bing.jpg")
 mypath = "C:/Users/gunaw/AppData/Local/Packages/Microsoft.BingWallpaper_8wekyb3d8bbwe/LocalState/images/Bing/"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-# print(onlyfiles)
 fileChosen = False
 while not fileChosen:
     randomFile = random.choice(onlyfiles)

@@ -2,15 +2,23 @@
 
 I created this project because I want to make my VS Code background to be customized using images from Bing Wallpaper.
 
+## What's New
+Latest version: 1.1
+- No longer picks image based on date
+- Randomize image picking method
+- Dynamically choose image regardless of naming
+- Turn off terminal in exe file
+
 ## Features
 
-- Copy the Bing Wallpaper image that are used yesterday
+- Copy the Bing Wallpaper image that are used recently
 - Paste the background image into another folder
 
 ## What I Learned
  
 - How to setup my python project from start to finish
 - How to compile my project using the pyinstaller
+- Working with python randomizer and os.path
 
 ## Next development (maybe)
 
